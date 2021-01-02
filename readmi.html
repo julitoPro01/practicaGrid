@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="padre">
+    <div class="items">header 1</div>
+    <div class="items">nav 2</div>
+    <div class="items">upper content left 3</div>
+    <div class="items">upper content center 4</div>
+    <div class="items">upper content right 5</div>
+    <div class="items">middle content 6</div>
+    <div class="items">lower content 7</div>
+    <div class="items">sticky footer 8</div>
+    </div>
+    <style>
+        
+        .padre{
+            display: flex;
+            width: 80vw;
+            height: 500px; 
+            background-color: rgb(221, 14, 31);
+            padding: 5px;
+            margin: auto;
+            display:grid;
+            grid-template-columns:repeat(3,auto);
+            grid-template-rows: repeat(3,auto) ;
+            grid-gap:5px;
+            
+
+        }
+        .items{
+            display:flex;
+            border: 1px solid white;
+            background-color:darkblue;    
+            justify-content: center;
+            align-items:center;
+            
+
+             }
+             .items:nth-child(1){
+                  grid-column-start:1;
+                  grid-column-end:5;
+             }
+             .items:nth-child(2){
+                 grid-row-start:2;
+                 grid-row-end:5;
+             }
+             .items:nth-child(8){
+                 grid-column-start: 5;
+                 grid-column-end: 1;
+             }
+             .items:nth-child(7){
+                grid-column-start:2;
+                grid-column-end:5;                
+             }
+             .items:nth-child(6){
+                 grid-column-start:2;
+                 grid-column-end:5;
+
+             }
+    </style>
+</body>
+</html>
